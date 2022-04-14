@@ -8,13 +8,11 @@ export interface InfoPage {
 }
 
 export interface InfoAnimes {
-    about?: string;
-    alter_name?: string;
-    autor?: string;
-    genres?: string;
-    main_character?: string;
+    site?: string;
     name?: string;
-    poster?: string;
+    page_name?: string;
+    about?: string;
+    about_2?: string;
 }
 
 export interface AnimesInterface {
