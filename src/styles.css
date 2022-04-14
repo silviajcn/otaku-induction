@@ -1,0 +1,60 @@
+/* Animacion loading svg */
+svg path,
+svg rect{
+  fill: black;
+}
+
+.alinear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animaciones cards */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion) {
+    .animated {
+        -webkit-animation: unset !important;
+        animation: unset !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/* Estilos items */
+/* .main_character_tama{
+    width: auto;
+    height: 300px;
+} */
