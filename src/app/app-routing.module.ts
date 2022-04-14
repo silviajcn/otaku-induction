@@ -6,8 +6,8 @@ import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 
 const app_routes: Routes = [
-    { path: 'home', component: PortfolioComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'home', component: PortfolioComponent },
     { path: 'item/:id', component: ItemComponent },
     { path: 'search/:termino', component: SearchComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }

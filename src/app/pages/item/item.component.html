@@ -99,21 +99,25 @@
                     </div>
                 </div>
             </div>
-            <div class="ae-grid__item--alt item-sm--auto item-lg-3 item-lg--offset-1 item-lg--end">
-               <img [src]="anime.poster" [alt]="anime.anime_name">
+
+            <div class="ae-grid__item--alt item-sm--auto item-lg-2 item-lg--offset-1 item-lg--end">
+                <span class="ae-u-boldest">Personaje principal:</span>
+                <p class="au-mt-1">{{anime.main_character}}</p>
+                <img [src]="anime.main_character_photo" [alt]="anime.main_character">
             </div>
+            
         </div>
 
         <div class="ae-grid ae-grid--collapse">
-            <div class="ae-grid__item--alt item-sm--auto item-lg-3">
+            <!-- <div class="ae-grid__item--alt item-sm--auto item-lg-3">
                 <h6 class="ae-u-boldest">Personaje principal: </h6>
                 <p class="au-mt-1">{{anime.main_character}}</p>
                 <img [src]="anime.main_character_photo" [alt]="anime.main_character" class="tamanio-character-img">
-            </div>
+            </div> -->
 
-            <iframe width="560" height="315" [src]="anime.video" title="YouTube video player"
+            <!-- <iframe width="560" height="315" [src]="anime.video" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen DomSanitizer="bypassSecurityTrustUrl"></iframe>
+                allowfullscreen DomSanitizer="bypassSecurityTrustUrl"></iframe> -->
 
             <!-- <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
                 <h5 class="ae-u-bolder tamanio-name-cha">Personaje principal</h5>
@@ -158,10 +162,15 @@
                 <h6 class="ae-u-boldest">Lo positivo ✅</h6>
                 <p class="au-lh-3">{{anime.notes_g}}</p>
             </div>
+             <div class="ae-grid__item--alt item-sm--auto item-lg-3 item-lg--offset-1 item-lg--end">
+                <img [src]="anime.poster" [alt]="anime.anime_name">
+            </div>
             <div class="ae-grid__item--alt item-lg-4">
                 <h6 class="ae-u-boldest">Lo negativo ❌</h6>
                 <p class="au-lh-3">{{anime.notes_b}}</p>
             </div>
+
+           
         </div>
 
     </div>
