@@ -9,7 +9,7 @@ export class AnimesService {
 
   cargando = true;
   animes: any[] = [];
-  animesFilter: any[] = [];
+  animesFilter: AnimesInterface[] = [];
 
   constructor(private http: HttpClient) {
 
@@ -19,17 +19,15 @@ export class AnimesService {
 
   private cargarAnimes() {
 
-
     return new Promise<void>((resolve, reject) => {
       this.http.get('https://otaku-induction-default-rtdb.firebaseio.com/animes.json')
-      .subscribe((resp: any) => {
-        //console.log(resp);
+      .subscribe(  (resp: any) => {
+        // console.log(resp);
         this.animes = resp;
         this.cargando = false;
         resolve();
       });
     });
-
     
   }
 
@@ -59,17 +57,20 @@ export class AnimesService {
   }
 
   private filtrarAnimes(termino: string) {
-    console.log(this.animes);
+    // console.log(this.animes);
     this.animesFilter = [];
 
     termino = termino.toLocaleLowerCase();
 
-    this.animes.forEach(ani => {
+    this.animes.forEach(anim => {
 
-      const titleLower = ani.title.toLocaleLowerCase();
+      const categoriaLower = anim.categoria.toLocaleLowerCase();
+      const categoriesLower = anim.categories.toLocaleLowerCase();
+      const titleLower = anim.title.toLocaleLowerCase();
 
-      if (ani.title.indexOf(termino) >= 0 || titleLower.indexOf(termino) >= 0) {
-        this.animesFilter.push(ani);
+      if (categoriesLower.indexOf(termino) >= 0 || titleLower.indexOf( termino ) >= 0 || categoriaLower.indexOf(termino) >= 0) {
+      
+        this.animesFilter.push(anim);
       }
 
     });

@@ -15,7 +15,9 @@
     </svg>
 </div>
 
-<section *ngIf="anime || !animesService.cargando">
+<section *ngIf=" 
+!animesService.cargando
+">
     <header
    [ngStyle]="{'background-image': 'url('+ anime.banner +')'}"
     class="rk-portfolio-cover  item-inside-1">
@@ -113,7 +115,9 @@
                 <img [src]="anime.main_character_photo" [alt]="anime.main_character" class="tamanio-character-img">
             </div> -->
 
-            <!-- <iframe width="560" height="315" [src]="anime.video" title="YouTube video player"
+            <!-- <p>{{dangerousVideoUrl}}</p>
+
+            <iframe width="560" height="315" [src]="videoUrl" title="YouTube video player"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen DomSanitizer="bypassSecurityTrustUrl"></iframe> -->
 

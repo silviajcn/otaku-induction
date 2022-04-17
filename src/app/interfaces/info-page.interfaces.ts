@@ -1,3 +1,5 @@
+// import { SafeResourceUrl } from '@angular/platform-browser';
+
 export interface InfoPage {
     title?: string;
     autor?: string;
@@ -16,10 +18,11 @@ export interface InfoAnimes {
 }
 
 export interface AnimesInterface {
-    code?: string;
-    title?: string;
-    categoria?: string;
-    poster?: string;
+    code: string;
+    title: string;
+    categoria: string;
+    categories: string;
+    poster: string;
 }
 
 export interface AllAnimesInterface {
@@ -41,7 +44,7 @@ export interface AllAnimesInterface {
     poster?: string;
     score?: number;
     status?: string;
-    video?: string;
+    videoUrl?: string;
     notes_g?: string;
     notes_b?: string;
 }
